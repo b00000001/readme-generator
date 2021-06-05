@@ -1,4 +1,7 @@
-const questions = require("./questions");
-const inquirer = require("inquirer");
+const questions = require('./questions');
+const inquirer = require('inquirer');
+const responseHandler = require('./handleResponse');
 
-inquirer.prompt(questions.questions).then((response) => console.log(response));
+const responses = {};
+inquirer.prompt(questions.questions)
+.then(responseHandler);
