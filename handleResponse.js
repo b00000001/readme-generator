@@ -1,14 +1,11 @@
-const fs = require('fs');
-const readme = require('./readmetemplate');
-
-const userValues = {};
-
+const fs = require("fs");
+const makeReadme = require("./makereadme");
 const responseHandler = (response) => {
-    readme.values.userName = response.userName
-}
+	makeReadme(response);
+};
+
+fs.writeFile("./README.md", makeReadme(), (err) => {
+	console.log(err);
+});
 
 module.exports = responseHandler;
-
-// fs.writeFile('README.md', JSON.stringify(response, null, 2), (err) => {
-//   console.log(response);  
-// });
