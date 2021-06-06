@@ -1,6 +1,7 @@
 const generateReadme = (res) => {
-	`
-    # Title ${res.projectTitle}`;
+	return `
+    <h1 align='center>${res.projectTitle}
+    `
 };
 
 module.exports = generateReadme;
