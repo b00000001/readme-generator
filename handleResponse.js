@@ -1,6 +1,8 @@
 const fs = require("fs");
 const makeReadme = require("./makereadme");
+
 const responseHandler = (response) => {
+	console.log(response);
 	makeReadme(response);
 	writeFile("./README.md", makeReadme(response));
 };

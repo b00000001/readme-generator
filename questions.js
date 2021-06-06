@@ -45,6 +45,7 @@ SIL Open Font License 1.1
 University of Illinois/NCSA Open Source License
 The Unlicense
 zLib License */
+
 const questions = [
 	{
 		type: "input",
@@ -67,7 +68,7 @@ const questions = [
 		message: "Please enter installation instructions",
 	},
 	{
-		type: "checkbox",
+		type: "list",
 		name: "licenseType",
 		message: "Please enter the Apache License you would like to use",
 		choices: [
@@ -76,6 +77,21 @@ const questions = [
 			"BSD 3-Clause License",
 		],
 	},
+	{
+		type: "confirm",
+		name: "testsAvailable",
+		message: "Do you have any Tests for this repo?",
+	},
+	{
+		type: "confirm",
+		name: "usageInstructions",
+		message: "Do you have any Usage instructions for this repo?",
+	},
+	{
+		type: "confirm",
+		name: "additionalCollaborators",
+		message: "Do you have additional collaborators?",
+	},
 ];
 
-module.exports = { questions };
+module.exports = { questions, additionalQuestions };

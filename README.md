@@ -1,7 +1,7 @@
-<h1 align='center'>test</h1>
+<h1 align='center'>t</h1>
 
 # Description
-test
+t
 
 # Table of Contents 
 1. <a href='#Installation'>Installation
@@ -15,12 +15,12 @@ test
 1. Clone the Repo. (```git clone https://github.com/your_username_/Project-Name.git```
 )
 2. Install NPM packages. (```npm install```)
-3. test
+3. t
 
-# Usage
+
 
 # License
-Apache 2.0 License,Boost Software License 1.0,BSD 3-Clause License
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
@@ -30,7 +30,10 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (```git push origin feature/AmazingFeature```)
 5. Open a Pull Request
 
-# Tests
+# Collaborators 
+ 1. t
+
+
 
 # Questions
     

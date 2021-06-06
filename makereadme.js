@@ -1,21 +1,22 @@
 const licenseBadges = {
-	apache: {
-		"Apache 2.0 License": `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`,
-		"Boost Software License 1.0": `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`,
-		"BSD 3-Clause License": `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`,
-		"BSD 2-Clause License": `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`,
-	},
+	"Apache 2.0 License": `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`,
+	"Boost Software License 1.0": `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`,
+	"BSD 3-Clause License": `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`,
+	"BSD 2-Clause License": `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`,
 };
 
 const generateReadme = (res) => {
-	console.log(res);
-	for (licenses of res.licenseType) {
-		console.log(licenses);
-		console.log(licenseBadges.apache[licenses]);
-		res.licenseType.map(() => {
-			licenseBadges.apache[licenses];
-		});
+	// console.log(res);
+	// res.licenseType.forEach((license) => {
+	// 	console.log(typeof license, license);
+	// 	// console.log(licenseBadges.apache[license]);
+	// });
+	switch (res.licenseType) {
+		case "Apache 2.0 License":
+			res.licenseType = licenseBadges[res.licenseType];
+			break;
 	}
+
 	return `<h1 align='center'>${res.projectTitle}</h1>
 
 # Description
@@ -35,7 +36,7 @@ ${res.repoDescription}
 2. Install NPM packages. (\`\`\`npm install\`\`\`)
 3. ${res.installInstructions}
 
-# Usage
+${res.usageInstructions ? `# Usage` : ""}
 
 # License
 ${res.licenseType}
@@ -48,7 +49,10 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (\`\`\`git push origin feature/AmazingFeature\`\`\`)
 5. Open a Pull Request
 
-# Tests
+# Collaborators 
+ 1. ${res.userName}
+
+${res.testsAvailable ? `# Tests` : ""}
 
 # Questions
     `;
