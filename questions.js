@@ -63,17 +63,17 @@ const questions = [
 	},
 	{
 		type: "input",
-		name: "userName",
+		name: "installInstructions",
 		message: "Please enter installation instructions",
 	},
 	{
-		type: "list",
+		type: "checkbox",
 		name: "licenseType",
-		message: "Please enter the License you would like to use",
+		message: "Please enter the Apache License you would like to use",
 		choices: [
-			"Academic Free License v3.0",
-			"Apache license 2.0",
-			"Artistic license 2.0",
+			"Apache 2.0 License",
+			"Boost Software License 1.0",
+			"BSD 3-Clause License",
 		],
 	},
 ];
