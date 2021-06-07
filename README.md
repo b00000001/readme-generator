@@ -19,7 +19,7 @@ This is a readme generator to make generating README.md files for your github ea
 
 
 # Usage 
-[![Demo of Application]](./assets/appdemo.mp4)
+![Demo of Application](./assets/appdemo.gif)
  This file generates a Readme file dynamically based on your node inputs. There is a table of contents that will snap to the appropriate section when clicked. If the section was not needed (i.e. you pressed no to one of the questions), then that section will not be generated and the anchor tag will not work. Please verify you are inputting the correct information when you generate a readme or you will need to redo or edit the file manually.
 
 # License
