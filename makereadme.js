@@ -6,16 +6,22 @@ const licenseBadges = {
 };
 
 const generateReadme = (res) => {
-	// console.log(res);
-	// res.licenseType.forEach((license) => {
-	// 	console.log(typeof license, license);
-	// 	// console.log(licenseBadges.apache[license]);
-	// });
-	switch (res.licenseType) {
-		case "Apache 2.0 License":
-			res.licenseType = licenseBadges[res.licenseType];
-			break;
-	}
+	// res.licenseType = licenseBadges[res.licenseType];
+	const licenseBadge = licenseBadges[res.licenseType];
+	// switch (res.licenseType) {
+	// 	case "Apache 2.0 License":
+	// 		res.licenseType = licenseBadges[res.licenseType];
+	// 		break;
+	// 		case "Boost Software License 1.0":
+	// 		res.licenseType = licenseBadges[res.licenseType];
+	// 		break;
+	// 		case "BSD 3-Clause License":
+	// 		res.licenseType = licenseBadges[res.licenseType];
+	// 		break;
+	// 		case "BSD 2-Clause License":
+	// 		res.licenseType = licenseBadges[res.licenseType];
+	// 		break;
+	// }
 
 	return `<h1 align='center'>${res.projectTitle}</h1>
 
@@ -23,23 +29,24 @@ const generateReadme = (res) => {
 ${res.repoDescription}
 
 # Table of Contents 
-1. <a href='#Installation'>Installation
-2. <a href='#Usage'>Usage
-3. <a href='#License'>License
-4. <a href='#Contributing'>Contributing
-5. <a href='#Tests'>Tests
-6. <a href='#Questions'>Questions</a>
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Contributing](#Contributing)
+5. [Collaborators](#Collaborators)
+6. [Tests](#Tests)
+7. [Questions](#Questions)
 
 # Installation
 1. Clone the Repo. (\`\`\`git clone https://github.com/your_username_/Project-Name.git\`\`\`
 )
 2. Install NPM packages. (\`\`\`npm install\`\`\`)
-3. ${res.installInstructions}
+${res.installIntructions ? `3. ${res.specialInstructions}` : ''}
 
 ${res.usageInstructions ? `# Usage` : ""}
 
 # License
-${res.licenseType}
+${licenseBadge}
 
 # Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
@@ -50,11 +57,14 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 # Collaborators 
- 1. ${res.userName}
+ 1. ${res.userName} (http://www.github.com/${res.userName})
+ ${res.additionalCollaborators ? `2.${res.collaborators}`: ''}
 
 ${res.testsAvailable ? `# Tests` : ""}
 
 # Questions
+Please visit my github to learn more: <a href='http://github.com/${res.userName}'>My Github</a>
+- If you have any questions for me, please contact me at ${res.email}
     `;
 };
 

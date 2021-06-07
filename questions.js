@@ -54,6 +54,11 @@ const questions = [
 	},
 	{
 		type: "input",
+		name: "email",
+		message: "Please enter your email address.",
+	},
+	{
+		type: "input",
 		name: "projectTitle",
 		message: "Please enter the title of your project.",
 	},
@@ -63,9 +68,15 @@ const questions = [
 		message: "Please enter your repo description.",
 	},
 	{
-		type: "input",
+		type: "confirm",
 		name: "installInstructions",
-		message: "Please enter installation instructions",
+		message: "Do you have special installation instructions? ",
+	},
+	{
+		type: "input",
+		name: "specialInstructions",
+		message: "Enter special installation instructions here",
+		when: (specialInstruction) => specialInstruction.installInstructions
 	},
 	{
 		type: "list",
@@ -81,17 +92,38 @@ const questions = [
 		type: "confirm",
 		name: "testsAvailable",
 		message: "Do you have any Tests for this repo?",
+		default: false
+	},
+	{
+		type: "input",
+		name: "tests",
+		message: "Please enter any tests you have.",
+		when: (tests) => tests.testsAvailable
 	},
 	{
 		type: "confirm",
 		name: "usageInstructions",
 		message: "Do you have any Usage instructions for this repo?",
+		default: false
+	},
+	{
+		type: "confirm",
+		name: "instructions",
+		message: "Enter additional Instructions.",
+		when: (instruction) => instruction.usageInstructions
 	},
 	{
 		type: "confirm",
 		name: "additionalCollaborators",
 		message: "Do you have additional collaborators?",
+		default: false
+	},
+	{
+		type: "input",
+		name: "collaborators",
+		message: "Enter the information for the additional collaborators here.",
+		when: (collaborator) => collaborator.additionalCollaborators
 	},
 ];
 
-module.exports = { questions, additionalQuestions };
+module.exports = { questions};

@@ -1,21 +1,22 @@
-<h1 align='center'>t</h1>
+<h1 align='center'>Readme Generator</h1>
 
 # Description
-t
+This is a Readme Generator
 
 # Table of Contents 
-1. <a href='#Installation'>Installation
-2. <a href='#Usage'>Usage
-3. <a href='#License'>License
-4. <a href='#Contributing'>Contributing
-5. <a href='#Tests'>Tests
-6. <a href='#Questions'>Questions</a>
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Contributing](#Contributing)
+5. [Collaborators](#Collaborators)
+6. [Tests](#Tests)
+7. [Questions](#Questions)
 
 # Installation
 1. Clone the Repo. (```git clone https://github.com/your_username_/Project-Name.git```
 )
 2. Install NPM packages. (```npm install```)
-3. t
+
 
 
 
@@ -31,9 +32,12 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 # Collaborators 
- 1. t
+ 1. binarystag (http://www.github.com/binarystag)
+ 
 
 
 
 # Questions
+Please visit my github to learn more: <a href='http://github.com/binarystag'>My Github</a>
+- If you have any questions for me, please contact me at deas.aaron@gmail.com
     
