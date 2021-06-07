@@ -1,7 +1,7 @@
 <h1 align='center'>Readme Generator</h1>
 
 # Description
-This is a Readme Generator
+This is a readme generator to make generating README.md files for your github easier to generate on the fly. 
 
 # Table of Contents 
 1. [Installation](#Installation)
@@ -18,7 +18,8 @@ This is a Readme Generator
 2. Install NPM packages. (```npm install```)
 
 
-
+# Usage 
+ This file generates a Readme file dynamically based on your node inputs. There is a table of contents that will snap to the appropriate section when clicked. If the section was not needed (i.e. you pressed no to one of the questions), then that section will not be generated and the anchor tag will not work. Please verify you are inputting the correct information when you generate a readme or you will need to redo or edit the file manually.
 
 # License
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -32,12 +33,12 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 # Collaborators 
- 1. binarystag (http://www.github.com/binarystag)
+ 1. b00000001 (http://www.github.com/b00000001)
  
 
 
 
 # Questions
-Please visit my github to learn more: <a href='http://github.com/binarystag'>My Github</a>
+Please visit my github to learn more: <a href='http://github.com/b00000001'>My Github</a>
 - If you have any questions for me, please contact me at deas.aaron@gmail.com
     

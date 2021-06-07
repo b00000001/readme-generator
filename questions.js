@@ -107,7 +107,7 @@ const questions = [
 		default: false
 	},
 	{
-		type: "confirm",
+		type: "input",
 		name: "instructions",
 		message: "Enter additional Instructions.",
 		when: (instruction) => instruction.usageInstructions

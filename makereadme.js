@@ -43,7 +43,7 @@ ${res.repoDescription}
 2. Install NPM packages. (\`\`\`npm install\`\`\`)
 ${res.installIntructions ? `3. ${res.specialInstructions}` : ''}
 
-${res.usageInstructions ? `# Usage` : ""}
+${res.usageInstructions ? `# Usage \n ${res.instructions}` : ""}
 
 # License
 ${licenseBadge}
