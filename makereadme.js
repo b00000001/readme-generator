@@ -6,23 +6,7 @@ const licenseBadges = {
 };
 
 const generateReadme = (res) => {
-	// res.licenseType = licenseBadges[res.licenseType];
 	const licenseBadge = licenseBadges[res.licenseType];
-	// switch (res.licenseType) {
-	// 	case "Apache 2.0 License":
-	// 		res.licenseType = licenseBadges[res.licenseType];
-	// 		break;
-	// 		case "Boost Software License 1.0":
-	// 		res.licenseType = licenseBadges[res.licenseType];
-	// 		break;
-	// 		case "BSD 3-Clause License":
-	// 		res.licenseType = licenseBadges[res.licenseType];
-	// 		break;
-	// 		case "BSD 2-Clause License":
-	// 		res.licenseType = licenseBadges[res.licenseType];
-	// 		break;
-	// }
-
 	return `<h1 align='center'>${res.projectTitle}</h1>
 
 # Description
@@ -41,7 +25,7 @@ ${res.repoDescription}
 1. Clone the Repo. (\`\`\`git clone https://github.com/your_username_/Project-Name.git\`\`\`
 )
 2. Install NPM packages. (\`\`\`npm install\`\`\`)
-${res.installIntructions ? `3. ${res.specialInstructions}` : ''}
+${res.installIntructions ? `3. ${res.specialInstructions}` : ""}
 
 ${res.usageInstructions ? `# Usage \n ${res.instructions}` : ""}
 
@@ -58,12 +42,14 @@ Contributions are what make the open source community such an amazing place to b
 
 # Collaborators 
  1. ${res.userName} (http://www.github.com/${res.userName})
- ${res.additionalCollaborators ? `2.${res.collaborators}`: ''}
+ ${res.additionalCollaborators ? `2.${res.collaborators}` : ""}
 
 ${res.testsAvailable ? `# Tests` : ""}
 
 # Questions
-Please visit my github to learn more: <a href='http://github.com/${res.userName}'>My Github</a>
+Please visit my github to learn more: <a href='http://github.com/${
+		res.userName
+	}'>My Github</a>
 - If you have any questions for me, please contact me at ${res.email}
     `;
 };
